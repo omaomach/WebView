@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         webView.loadData(video.toString(), "text/html", "utf-8")
         webView.settings.javaScriptEnabled = true
         webView.settings.allowFileAccess = true
-        webView.webChromeClient = WebChromeClient()
+        webView.webChromeClient = CustomWebChromeClient(this)
         webView.webViewClient = WebViewClient()
         webView.loadUrl(video)
 
